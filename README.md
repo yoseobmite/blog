@@ -1,0 +1,2 @@
+# blog
+ghost_automat
