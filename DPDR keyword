@@ -1,0 +1,153 @@
+##UNINTERRUPTIBLE POWER SUPPLIES
+13.1 PURPOSE
+13.1.1 The purpose of a UPS in a DP system is to provide:-
+1. Stable, clean power.
+2. Continuity of power during main power system outage.
+3. Power system transient ride through capabilities.
+
+13.1.2 Design of UPS systems follow either a centralized topology or distributed topology.
+Centralized topology lends itself to a robust system but introduces commonality while a
+distributed system potentially could be less robust but minimizes commonality.
+Commonality potentially increases the amount of equipment lost as a consequence of
+failure.
+
+13.1.3 The design of UPS systems, their power sources and distribution should:
+1. Accomplish robustness.
+2. Follow the WCFDI.
+3. Not introduce additional vulnerabilities.
+
+13.2 TOPOLOGY
+
+13.2.1 Design of UPS systems follow either a centralized topology or distributed topology.
+Centralized topology lends itself to a robust system but introduces commonality while a
+distributed system potentially could be less robust but minimizes commonality.
+Commonality potentially increases the amount of equipment lost as a consequence of
+failure. Distribution of UPS power from centralized sources may be particularly challenging
+in DP Class 3 designs but some compromise between a large number of small UPSs and
+fewer larger UPSs (supporting the overall split in the redundancy concept) should be
+achievable.
+
+13.2.2 The redundancy concept should not be dependent on battery endurance. UPSs should be
+provided in a manner which supports the WCFDI and matches the divisions in the
+redundancy concept. (Minimum two UPSs for DP Class 2 two-way split and minimum
+three UPSs for DP Class 3 two-way split plus backup DP control system).
+
+13.2.3 The UPS battery endurance should only be considered as providing time to transfer
+control to other control equipment in an orderly manner. The DP system will typically not
+be fully fault tolerant once one of the UPSs has failed. It may be possible to recover
+operation by switching to the bypass depending on the nature of the UPS fault but fault
+tolerance may still be compromised.
+
+13.2.4 Failure of a UPS output should not lead to failure effects exceeding the worst case failure
+design intent. Input power supplies for DP related UPS’s should be split in line with the
+redundancy concept. Where a group of UPS’s share a common input power supply, loss
+of that power supply (switchboard) should not lead to failure effects exceeding the worst
+case failure design intent when all UPS batteries in that group are exhausted.
+Classification society requirements for UPS battery endurance are typically 30 minutes.
+Consideration should be given to extending the endurance if required by the industrial
+mission. Where UPS’s are provided with a normal and back up supply, the normal power
+supply should be from the appropriate part of the main power systems. The back up
+supply should be from the emergency switch board.
+
+13.2.5 Design should acknowledge the reluctance to test UPS systems and incorporate means to
+establish conditions of the batteries. Testing of UPS systems should include testing under
+load conditions.
+
+13.3 RECOVERY FROM ESD
+
+13.3.1 Designers should be aware that some UPSs will not start from battery supply alone. This
+type of UPSs is unsuitable for DP vessels especially, those vessels with Emergency Shut
+Down (ESD) systems which disconnect the battery on ESD 0 (total shutdown). The UPS
+will not restart when the battery is reconnected and therefore there will be no control power
+available to restart the power plant. It may be possible to overcome this by arranging for
+backup supplies from the emergency generator but this approach makes recovery from
+ESD 0 dependent on the emergency generator starting. Dependence on the emergency
+generator for DP operations is to be avoided.
+13.3.2 There is significant variation in the quality of batteries available for UPSs and the price
+difference is often related to the life expectancy of the batteries supplied with a unit. A
+cheaper UPS may appear attractive but the cost of ownership may be greater if the
+batteries have to be changed more frequently. Careful consideration should be given to
+the choice of control system UPSs in the vessel’s specification. Further details can be
+found in IMCA M196 ‘Guidance on The Design, Selection, Installation and Use of
+Uninterruptible Power Supplies Onboard Vessels’.
+
+13.3.3 There are several types of UPS.
+1. The ‘online’ type, also known as the ‘double conversion’ type is the recommended
+UPS type for control systems onboard vessels.
+2. Line interactive types may exhibit a small output voltage glitch as they transfer from
+line power to battery power. This glitch is usually too brief to affect the operation of
+controls systems with DC power supplies but may be detected by protective
+functions on variable speed drives as an indication that the control supply is failing.
+The drive may shut down in response leading to loss of thrust.
+
+13.3.4 UPS designs having a function called Phase Tracking are not suitable for vessel
+applications. These UPSs attempt to track the mains power frequency waveform for
+synchronization purposes and are used in land based applications.
+
+13.3.5 Some types of UPS are unable to charge their batteries from the poor quality power
+supplies found on some DP vessels due to high levels of harmonic content and poor
+voltage and frequency stability. Thus their batteries may be discharged when called upon
+to provide power in a blackout.
+
+13.3.6 UPSs should have their normal power supply aligned to the same side of the redundancy
+concept as the equipment they supply.
+
+13.3.7 The practice of supplying all UPSs and DC battery systems only from the emergency
+switchboard should be avoided. This is contrary to SOLAS and some classification society
+DP rules. Failure of the emergency switchboard such as a faulty circuit breaker or service
+transformer fault can limit the vessel’s time on DP to the battery endurance, after which the
+vessel may be completely without power.
+
+13.3.8 The emergency switchboard may be usefully employed as a backup supply to UPSs to
+allow batteries to be charged when the main power system is not available. Automatic and
+manual transfer to the backup supply is possible.
+
+13.3.9 There should be a remote indication that the UPS is connected to its normal supply. In the
+case of automatic transfer to the backup supply, the changeover should be carefully
+designed to prevent a faulty UPS transferring and affecting main and emergency supplies.
+
+13.3.10 UPSs should be provided with comprehensive alarm and monitoring facilities. As a
+minimum there should be alarms to indicate.
+1. UPS on batteries.
+2. UPS in bypass.
+3. Battery disconnected.
+4. Mains power present.
+
+13.3.11 UPS output should not cross the boundaries between redundant equipment groups. This is
+particularly important in DP Class 3 designs.
+
+13.3.12 Discrimination is a property of electrical protection schemes. Full discrimination is
+achieved if a fault is isolated at source under defined power distribution system
+configurations. Discrimination may be achieved by varying the current and/or the time at
+which protection devices in the fault current path operate. Typically the highest current or
+longest delay is applied to the protection devices nearest the power source To achieve full
+discrimination in over current protection the power source must be able to supply the
+required level of fault current for a time exceeding the longest delay. Some types of UPS
+may not be able to deliver sufficient fault current to clear faults selectively. Ideally UPS
+distribution should stay within the redundant machinery and control system group and not
+be used to power equipment in other redundant machinery groups. Adopting this design
+approach prevents voltage dips, over voltages and other faults transferring from one
+redundant system to the other. UPSs for DP controls systems should be able to clear
+faults selectively. Care should be take to confirm a UPS has all the necessary attributes
+required by the redundancy concept
+
+13.3.13 Some classification societies require UPS battery charging to cease on loss of ventilation.
+Care should be taken not to create a common cause failure associated with ventilation
+design including its power supply. Suitable alarms should be provided to indicate that
+charging of the battery has been stopped. This common cause failure can be avoided by
+using sealed batteries not requiring ventilation.
+
+13.3.14 The practice of switching UPS outputs to allow various loads to be supplied by any UPS
+may allow failure effects to exceed the worst case failure design intent.
+MARINE TECHNOLOGY SOCIETY
+DP VESSEL DESIGN PHILOSOPHY GUIDELINES
+102 MTS DP Vessel Design Philosophy Document - Part II.doc
+
+13.3.15 DP system FMEAs should not consider a UPS to be an infallible supply. Analysis should
+consider UPSs to fail like any other power distribution system. UPSs can fail causing:
+1. Over and under voltage.
+2. Over and under frequency.
+3. Short circuit.
+4. Earth fault.
+5. Open circuit.
+6. Phase failure (on three phase UPSs).
