@@ -18,4 +18,4 @@
 
 {{< image rc="https://user-images.githubusercontent.com/33090364/88170426-f84af000-cc1d-11ea-8b40-4784ed479ec6.jpg" alt="<소금 지방 산 열>" position="center" max-width="50%" height="auto" >}} 
 
-
+{{< twitter 1258939592801087490 >}}
